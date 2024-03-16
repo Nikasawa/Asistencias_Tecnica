@@ -15,3 +15,8 @@
     # Inasistencias
     # Huellas digitales
 
+# Dos vistas distintas de la interfaz:
+    # Preceptories
+    # Alumnos
+
+# Mostrar horarios actuales y proxima clase en base al horario actual (Libreria time)
