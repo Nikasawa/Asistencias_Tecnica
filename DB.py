@@ -5,9 +5,8 @@ import mysql.connector
 
 # Establecer la conexión con la base de datos
 conexion = mysql.connector.connect(
-    host="root",
-    user="localhost",
-    database="asistencias"
+    host="localhost",
+    user="root"
 )
 
 # Crear un cursor para ejecutar consultas
