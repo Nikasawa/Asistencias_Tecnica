@@ -20,3 +20,8 @@
     # Alumnos
 
 # Mostrar horarios actuales y proxima clase en base al horario actual (Libreria time)
+
+"""
+Metodologia de trabajo:
+    Nombre de variables: lowCamelCase
+"""
