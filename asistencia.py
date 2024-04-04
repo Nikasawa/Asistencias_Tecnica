@@ -24,4 +24,5 @@
 """
 Metodologia de trabajo:
     Nombre de variables: lowCamelCase
+    Dejar un comentario antes de cada funcion a modo de explicacion al resto
 """

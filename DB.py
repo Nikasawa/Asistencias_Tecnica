@@ -1,6 +1,7 @@
 # Archivo para probar conectar python con phpmyadmin
 # A modo de prueba, pero el archivo podria quedar como una biblioteca de funciones para el archivo principal (asistencia.py)
-
+# Las tablas van a tener: ID, nombre, apellido, asistencias y faltas; No todas las faltas restan asistencias ya que pueden estar justificadas, 
+# por lo que cada funcion que verifica las llegadas tarde puede devolver la falta y solo si no esta justificada se le resta a la asistencia 
 
 ################ ################ ################ ################ ################ ################ ##########
 # El metodo de conexion y la libreria de mysql.connector sirve tanto para phpmyadmin como para MySQL WorkBench #
@@ -34,16 +35,6 @@ def newTable():
     # (255): Maxima cantidad de caracteres
     cursor.execute("CREATE TABLE alumnos (ID int AUTOINCREMENT nombre VARCHAR(255), apellido VARCHAR(255), )")
 
-# Mostrar todas las tablas
-def showTable():
-
-    # Toma todas las tablas
-    cursor.execute("SHOW TABLES")
-
-    # Las imprime una por una
-    for x in cursor:
-        print(x)
-
 # Añadir algo a la tabla
 def addToTable():
 
@@ -53,6 +44,16 @@ def addToTable():
 # Funcion para eliminar todo de la base de datos (No usar)
 def deleteTable():
     cursor.execute("DELETE FROM alumnos WHERE 1")
+
+# Mostrar todas las tablas
+def showTable():
+
+    # Toma todas las tablas
+    cursor.execute("SHOW TABLES")
+
+    # Las imprime una por una
+    for x in cursor:
+        print(x)
 
 # Mostrar los elementos cargados en la tabla "alumnos"
 def showAlumnos():
@@ -65,6 +66,13 @@ def showAlumnos():
         print("Alumno: {} {}".format(x[1], x[2]))
         print("Asistencias: {}".format(21 - x[3]))
         print("Faltas: {}".format(x[3]))
+
+# Inicio probar resta de faltas
+def restarAsistencia():
+
+    falta = input("ingrese cantidad de falta")
+
+    cursor.execute('UPDATE alumnos SET Asistencias = {} WHERE Nombre = Raul')
 
 
 """
