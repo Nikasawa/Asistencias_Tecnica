@@ -78,6 +78,7 @@ class salon():
         pass
 
 class alumno():
+    
     def __init__(self, faltaTotal, faltasJustificadas, dia, jornada, horarioEntrada, horarioSalida):
 
         self.faltaTotal = faltaTotal
@@ -132,7 +133,9 @@ class alumno():
                 print('Llego despues de las 7:20')
                 self.falta =+ 0.25
 
-                if self.horaLlegada >= time.mktime(self.horarioEntrada.tm_hour, self.ho).tm_min + 15):
+                hora = time.mktime(time.localtime())
+                
+                if self.horaLlegada >= self.horarioEntrada.tm_hour:
 
                     print('Llego despues de las 7:20 + 15 minutos')
                     self.falta =+ 0.25

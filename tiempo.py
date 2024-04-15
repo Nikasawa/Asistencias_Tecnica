@@ -43,7 +43,7 @@ def sumarMinutos(var):
 
 #print(time.strptime(str(sumarHora(3)) + ':' + str(sumarMinutos(33)), "%H:%M"))
 
-if '720' > '800':
-    print('xd')
-else:
-    print('dadadd')
+
+hora = time.mktime(time.localtime())
+hora = time.strptime(hora, '%H:%M')
+print(hora)

@@ -39,11 +39,11 @@ def newTable():
 def addToTable():
 
     # Se toma: La tabla donde se quiere ingresar; los valores que tiene en ella y posteriormente los valores a ingresar; uno por uno
-    cursor.execute("INSERT INTO alumnos (Nombre, Apellidos, Asistencias) VALUES (%s, %s, %s)", ("Raul", "Alfonsin", 20))
+    cursor.execute("INSERT INTO prueba (fecha) VALUES (%s)", ('03:10:10',))
 
 # Funcion para eliminar todo de la base de datos (No usar)
 def deleteTable():
-    cursor.execute("DELETE FROM alumnos WHERE 1")
+    cursor.execute("DELETE FROM prueba WHERE 1")
 
 # Mostrar todas las tablas
 def showTable():
@@ -58,14 +58,12 @@ def showTable():
 # Mostrar los elementos cargados en la tabla "alumnos"
 def showAlumnos():
 
-    cursor.execute("SELECT ID, Nombre, Apellidos, Asistencias FROM alumnos")
+    cursor.execute("SELECT ID, fecha FROM prueba")
 
     # El fetchall() despues de seleccionar los elementos de la tabla devuelve una lista de todos los datos
     for x in cursor.fetchall():
         print("ID: {}".format(x[0]))
-        print("Alumno: {} {}".format(x[1], x[2]))
-        print("Asistencias: {}".format(21 - x[3]))
-        print("Faltas: {}".format(x[3]))
+        print("Fecha: {}".format(x[1]))
 
 # Inicio probar resta de faltas
 def restarAsistencia():
@@ -79,4 +77,6 @@ def restarAsistencia():
 ¡IMPORTANTE!
 El commit es obligatorio para cargar los cambios en la base de datos
 """
-conexion.commit()
+
+
+print(cursor.execute('SELECT LOCALTIME()'))
