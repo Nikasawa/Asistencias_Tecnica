@@ -79,4 +79,4 @@ El commit es obligatorio para cargar los cambios en la base de datos
 """
 
 
-print(cursor.execute('SELECT LOCALTIME()'))
+print(cursor.execute('SELECT ADDDATE(2017-06-15 09:34:21, INTERVAL 15 MINUTE)'))
