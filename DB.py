@@ -79,4 +79,16 @@ El commit es obligatorio para cargar los cambios en la base de datos
 """
 
 
-print(cursor.execute('SELECT ADDDATE(2017-06-15 09:34:21, INTERVAL 15 MINUTE)'))
+cursor.execute('SELECT LOCALTIME();')
+
+for x in cursor.fetchall():
+    for y in x:
+        tiempoSQL = y 
+
+segundos = tiempoSQL.second
+minutos = tiempoSQL.minute
+horas = tiempoSQL.hour
+
+print(segundos)
+print(minutos)
+print(horas)

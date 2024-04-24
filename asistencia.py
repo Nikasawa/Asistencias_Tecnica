@@ -29,6 +29,7 @@ Metodologia de trabajo:
 """
 
 import time
+import mysql.connector
 
 #Esto devuelve el horario, con hora, minutos y segundos
 hora = time.strftime("%X")
