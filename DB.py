@@ -83,7 +83,7 @@ cursor.execute('SELECT LOCALTIME();')
 
 for x in cursor.fetchall():
     for y in x:
-        tiempoSQL = y 
+        tiempoSQL = y
 
 segundos = tiempoSQL.second
 minutos = tiempoSQL.minute

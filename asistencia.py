@@ -26,13 +26,41 @@
 Metodologia de trabajo:
     Nombre de variables: lowCamelCase
     Dejar un comentario antes de cada funcion a modo de explicacion al resto
+    Aunque los comentarios despues pueden quedar desactualizados...
+    Podriamos considerar que comentar es una mala practica..
 """
 
+# Cuando se termine el proyecto, hay que evaluar los metodos que usamos de cada libreria
+# Ya que aca estamos llamando a la libreria entera, y no tiene sentido si es que solo usamos un par de metodos
+# una forma de que este un poquito mejor optimizado el programa
 import time
 import mysql.connector
 
-#Esto devuelve el horario, con hora, minutos y segundos
-hora = time.strftime("%X")
+# Metodo para conectar con la base de datos
+# (Bart, esto no tiene contraseña, pero no se lo digas a nadie)
+conexion = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    database="asistencias"
+)
+
+# El "Cursor", hace que podamos replicar las funciones de MySQL dentro del codigo de python, llamandolo con el metodo 'execute()'
+cursor = conexion.cursor()
+
+# Funcion para conseguir la hora y los minutos actuales
+def getHora_minuto():
+    # Pedirle el horario y fecha a MySQL
+    cursor.execute('SELECT LOCALTIME()')
+
+    # Navegar en el horario devuelto para tomar solo la informacion que queremos
+    for infoDeCursor in cursor.fetchall():
+        for ObtenerHoraDeInfo in infoDeCursor:
+            horario = ObtenerHoraDeInfo
+
+    # De todos los datos del horario nos quedamos con la hora y los minutos
+    return [horario.hour, horario.minute]
+
+horaActual = getHora_minuto()
 
 
 """
@@ -45,10 +73,12 @@ else:
 
 # Los dias estan en ingles porque asi los devuelve la libreria
 dias = {
-    "Monday": ["7:20", "8:30", "9:40", "10:50", "11:50"],
-    "Wednesday": ["7:20", "8:30", "9:40", "10:50", "11:50"]
+    "Monday": [[7, 20], [8, 30], [9, 40], [10, 50], [11, 50]],
+    "Wednesday": [[7, 20], [8, 30], [9, 40], [10, 50], [11, 50]]
 }
 
+# Funciones para sumar horas y minutos tratando de evitar erroes, esta adaptado para otro modulo
+# Por lo que de momento no funciona muy bien :,(
 def sumarHora(var):
 
     min = time.localtime().tm_min
@@ -74,10 +104,15 @@ def sumarMinutos(var):
     minutosSumados = time.strptime(str(hour) + ':' + str(min), '%H:%M').tm_min
     return minutosSumados
 
+# Esto es una clase para el grupo de alumnos entero, ya que seria mas comodo tener a todos
+# los objetos creados por la clase alumnos acomodados en un mismo lugar
 class salon():
     def __init__():
         pass
 
+# Clase alumnos, metodos para medir las faltas, ver el horario al que entra, sale y a la hora
+# a la que se supone que tiene que entrar y salir.
+# Hay que hacer una clase para cada entidad? Alta paja xddd
 class alumno():
     
     def __init__(self, faltaTotal, faltasJustificadas, dia, jornada, horarioEntrada, horarioSalida):
@@ -99,7 +134,7 @@ class alumno():
         self.horarioEntrada = horarioEntrada
         self.horarioSalida = horarioSalida
 
-        self.horaLlegada = "No entro" # Despues se cambia por la hora
+        self.horaLlegada = "No entro" # Despues se cambia por la hora, una lista con la hora y los minutos: [hora, minuto]
         self.horaSalida = "No salio" # Despues se cambia por la hora
 
         # cantidad de falta que acumula en el dia por llegada tarde, retiros, etc.
@@ -107,46 +142,86 @@ class alumno():
 
     # Pone el dedo en la huella al entrar
     def getHorarioLlegada(self):
-        self.horaLlegada = time.localtime()
-        self.entro = True
+
+        # Esta funcion solo peude actuar cuando el alumno entre por primera vez
+        # (Tendriamos que ver que pasa cuando alguien se hace el gracioso y toca varias veces)
+        # Intervalo de tiempo para poner el dedo?
+        if self.entro == True:
+            return
+
+        self.horaLlegada = getHora_minuto()
+        self.entro = True        
 
     # Pone el dedo en la huella al salir
     def getHorarioSalida(self):
-        self.horaSalida = time.strftime("%X")
+                
+        if self.entro == False:
+            return # El alumno ni siquiera entro y va a salir? Tremenda paradoja wacho
+        
+        # Conseguir la hora y los minutos a los que se fue
+        self.horaSalida = getHora_minuto()
 
-    def retiro(self):
+        # Si se retiro
         if self.horaSalida < self.horarioSalida:
-            self.retiro = True
+            
+            # El 'pass', sirve para que el codigo ignore que no hay nada dentro de la estructura del if.
+            # Lo que normalmente daria error en la siguiente linea de codigo
+            pass
+
+        self.entro = False # Bueno ahora si se fue
 
     # Funcion que calcula la cantidad de faltas que acumula a lo largo del dia
     def medirFalta(self):
 
-        if False: # time.strftime("%X") > self.horarioSalida and self.horaLlegada == 'No entro'
-            self.falta = 1
+        # Valores de las faltas acomodados en las variables
+        # (Para que quede mas ordenadito xd)
+        Sin_falta = 0
+        cuarto_falta = 0.25
+        media_falta = 0.5
+        Completa_falta = 1
 
-        elif True: #self.entro
+        # Me parecen muchos if, pero despues vemos si los podemos acomodar mejor
 
-            print(self.horaLlegada)
-            print(self.horarioEntrada + ':00')
+        # El alumno nunca llego
+        if self.entro:
+            self.falta = Completa_falta
 
-            if self.horaLlegada < self.horarioEntrada + ':00':
+            # Se corta la funcion, ya que si no llego, no hay mucho mas que ver sobre la falta, y nos evitamos la siguiente rama de decisiones
+            return
+
+        # El alumno entro a la escuela
+        else:
+
+            # Llego antes de la hora?
+            if self.horaLlegada[0] < self.horarioEntrada[0]:
+
+                # LLego incluso antes de la hora, la falta es 0
+                self.falta = Sin_falta
+                return
+            
+            # LLego despues de la hora, pero capaz lo salvan los minutos (?
+            else:
+
+                # LLegar 15 minutos mas tarde, o incluso pasarse de la hora es media falta
+                # Este if es una utopia en que la suma de minutos no suma nunca la hora.
+                # Despues acomodo ese caso, de momento me manejo con el famoso 7 y 20 xd
+                if self.HorarioLlegada[0] > self.horarioEntrada[0] or self.horarioLlegada[1] > self.horarioEntrada[0] + 15:
+                    self.falta =+ media_falta
+
+                # LLego a las 7, pero esta dentro del horario en cuestion de minutos?
+                elif self.HorarioLlegada[1] < self.horarioEntrada[1]:
+                    self.falta = Sin_falta
                 
-                print('Llego despues de las 7:20')
-                self.falta =+ 0.25
-
-                hora = time.mktime(time.localtime())
+                # Se paso de los minutos, pero no por mas de 15, asi que solo es un cuarto de falta
+                else:
+                    self.falta = cuarto_falta
                 
-                if self.horaLlegada >= self.horarioEntrada.tm_hour:
-
-                    print('Llego despues de las 7:20 + 15 minutos')
-                    self.falta =+ 0.25
-
-            if self.retiro:
-                if self.jornada:
-                    pass
 
     # Funcion que aplica todas las faltas acumuladas
+    # Si no acumulo ninguna falta simplemente suma 0
     def aplicarFalta(self):
+        # Por ahora solo se suma a una variable, pero cuando este la base de datos,
+        # Seria una funcion que la modifique sumando la falta que acumulo al valor del atributo que corresponda
         self.faltaTotal + self.falta
 
 
@@ -160,5 +235,10 @@ juanito = alumno(
 )
                  
 
-juanito.getHorarioLlegada()
-juanito.medirFalta()
+
+
+
+
+
+
+#print('Hora actual: {}:{}'.format(horaActual[0], horaActual[1]))
