@@ -70,32 +70,19 @@ dias = {
     "Friday ": [[7, 20], [8, 30], [9, 40], [10, 50], [11, 50]]
 }
 
-# Funciones para sumar horas y minutos tratando de evitar erroes, esta adaptado para otro modulo
-# Por lo que de momento no funciona muy bien :,(
-def sumarHora(var):
+# Funciones para sumar horas y minutos tratando de evitar errores
 
-    min = time.localtime().tm_min
-    hour = time.localtime().tm_hour
+def sumarMinutos(min1, min2):
 
-    if hour + var >= 60:
-        hour = hour + var - 60
-        min = 0
+    otraHora = 0
+    minutosTotal = min1 + min2
 
-    horaSumada = time.strptime(str(hour) + ':' + str(min), '%H:%M').tm_hour
+    while minutosTotal >= 60:
+        if minutosTotal >= 60:
+            otraHora += 1
+            minutosTotal -= 60
 
-    return horaSumada
-
-def sumarMinutos(var):
-
-    min = time.localtime().tm_min
-    hour = time.localtime().tm_hour
-
-    if min + var >= 60:
-        hour += 1
-        min = min + var - 60
-
-    minutosSumados = time.strptime(str(hour) + ':' + str(min), '%H:%M').tm_min
-    return minutosSumados
+    return [otraHora, minutosTotal]
 
 # Hay que hacer una clase para cada entidad? Alta paja xddd
 
@@ -199,16 +186,20 @@ class alumno():
                 # LLegar 15 minutos mas tarde, o incluso pasarse de la hora es media falta
                 # Este if es una utopia en que la suma de minutos no suma nunca la hora.
                 # Despues acomodo ese caso, de momento me manejo con el famoso 7 y 20 xd
-                if self.HorarioLlegada[0] > self.horarioEntrada[0] or self.horarioLlegada[1] > self.horarioEntrada[0] + 15:
-                    self.falta =+ media_falta
+                if self.horaLlegada[0] > self.horarioEntrada[0]:
+
+                    # Funcion para sumarle 15 minutos al horario que tiene para llegar tarde
+                    margenDe15Minutos = sumarMinutos(self.horarioEntrada[1], 15) 
+
+                    # Preguntar si el alumno llego dentro de ese margen de 15 minutos
+                    if self.horaLlegada[1] > margenDe15Minutos[1]:
+                        self.falta += media_falta
+                    else:
+                        self.falta += cuarto_falta
 
                 # LLego a las 7, pero esta dentro del horario en cuestion de minutos?
-                elif self.HorarioLlegada[1] < self.horarioEntrada[1]:
+                elif self.horaLlegada[1] < self.horarioEntrada[1]:
                     self.falta = Sin_falta
-                
-                # Se paso de los minutos, pero no por mas de 15, asi que solo es un cuarto de falta
-                else:
-                    self.falta = cuarto_falta
                 
 
     # Funcion que aplica todas las faltas acumuladas
@@ -228,6 +219,13 @@ juanito = alumno(
                 dias.get(time.strftime("%A"))[-1] # Hora de salida
 )
 
-horaActual = getHora_minuto()
+juanito.medirFalta()
+print(juanito.falta)
 
-print('Hora actual: {}:{}'.format(horaActual[0], horaActual[1]))
+horaActual = getHora_minuto()
+#print('Hora actual: {}:{}'.format(horaActual[0], horaActual[1]))
+
+
+
+
+
