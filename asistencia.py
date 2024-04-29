@@ -27,7 +27,7 @@ Metodologia de trabajo:
     Nombre de variables: lowCamelCase
     Dejar un comentario antes de cada funcion a modo de explicacion al resto
     Aunque los comentarios despues pueden quedar desactualizados...
-    Podriamos considerar que comentar es una mala practica..
+    Podriamos considerar que comentar es una mala practica...
 """
 
 # Cuando se termine el proyecto, hay que evaluar los metodos que usamos de cada libreria
