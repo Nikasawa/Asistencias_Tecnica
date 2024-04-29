@@ -60,21 +60,14 @@ def getHora_minuto():
     # De todos los datos del horario nos quedamos con la hora y los minutos
     return [horario.hour, horario.minute]
 
-horaActual = getHora_minuto()
-
-
-"""
-Se pueden hacer decisiones con el horario si lo comparamos con otro horario en formato texto
-if hora < "20:30":
-    print("todavia no son las 20 (" + hora + ")")
-else:
-    print("Hora pasada de las 20:30 (" + hora + ")")
-"""
-
-# Los dias estan en ingles porque asi los devuelve la libreria
+# Los dias estan en ingles porque asi los devuelve la libreria time
+# (Si, googlie los nombres en ingles porque no me los acordaba)
 dias = {
     "Monday": [[7, 20], [8, 30], [9, 40], [10, 50], [11, 50]],
-    "Wednesday": [[7, 20], [8, 30], [9, 40], [10, 50], [11, 50]]
+    "Tuesday ": [[7, 20], [8, 30], [9, 40], [10, 50], [11, 50]],
+    "Wednesday": [[7, 20], [8, 30], [9, 40], [10, 50], [11, 50]],
+    "Thursday ": [[7, 20], [8, 30], [9, 40], [10, 50], [11, 50]],
+    "Friday ": [[7, 20], [8, 30], [9, 40], [10, 50], [11, 50]]
 }
 
 # Funciones para sumar horas y minutos tratando de evitar erroes, esta adaptado para otro modulo
@@ -104,6 +97,8 @@ def sumarMinutos(var):
     minutosSumados = time.strptime(str(hour) + ':' + str(min), '%H:%M').tm_min
     return minutosSumados
 
+# Hay que hacer una clase para cada entidad? Alta paja xddd
+
 # Esto es una clase para el grupo de alumnos entero, ya que seria mas comodo tener a todos
 # los objetos creados por la clase alumnos acomodados en un mismo lugar
 class salon():
@@ -112,7 +107,6 @@ class salon():
 
 # Clase alumnos, metodos para medir las faltas, ver el horario al que entra, sale y a la hora
 # a la que se supone que tiene que entrar y salir.
-# Hay que hacer una clase para cada entidad? Alta paja xddd
 class alumno():
     
     def __init__(self, faltaTotal, faltasJustificadas, dia, jornada, horarioEntrada, horarioSalida):
@@ -233,12 +227,7 @@ juanito = alumno(
                 dias.get(time.strftime("%A"))[0], # Hora de llegada 
                 dias.get(time.strftime("%A"))[-1] # Hora de salida
 )
-                 
 
+horaActual = getHora_minuto()
 
-
-
-
-
-
-#print('Hora actual: {}:{}'.format(horaActual[0], horaActual[1]))
+print('Hora actual: {}:{}'.format(horaActual[0], horaActual[1]))
