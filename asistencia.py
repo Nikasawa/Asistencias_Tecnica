@@ -64,10 +64,10 @@ def getHora_minuto():
 # (Si, googlie los nombres en ingles porque no me los acordaba)
 dias = {
     "Monday": [[7, 20], [8, 30], [9, 40], [10, 50], [11, 50]],
-    "Tuesday ": [[7, 20], [8, 30], [9, 40], [10, 50], [11, 50]],
+    "Tuesday": [[7, 20], [8, 30], [9, 40], [10, 50], [11, 50]],
     "Wednesday": [[7, 20], [8, 30], [9, 40], [10, 50], [11, 50]],
     "Thursday ": [[7, 20], [8, 30], [9, 40], [10, 50], [11, 50]],
-    "Friday ": [[7, 20], [8, 30], [9, 40], [10, 50], [11, 50]]
+    "Friday": [[7, 20], [8, 30], [9, 40], [10, 50], [11, 50]]
 }
 
 # Funciones para sumar horas y minutos tratando de evitar errores
@@ -98,10 +98,12 @@ class alumno():
     
     def __init__(self, faltaTotal, faltasJustificadas, dia, jornada, horarioEntrada, horarioSalida):
 
+        # Faltas y Asistencias, atributos de la BD
         self.faltaTotal = faltaTotal
         self.faltasJustificadas = faltasJustificadas
         self.asistencias = 28 - (faltaTotal - faltasJustificadas)
 
+        # Horarios del alumno
         self.dia = dia
         self.jornada = jornada
 
@@ -127,11 +129,17 @@ class alumno():
         # Esta funcion solo peude actuar cuando el alumno entre por primera vez
         # (Tendriamos que ver que pasa cuando alguien se hace el gracioso y toca varias veces)
         # Intervalo de tiempo para poner el dedo?
+
         if self.entro == True:
             return
 
+        # Toma el horario al que entro
         self.horaLlegada = getHora_minuto()
-        self.entro = True        
+
+        # Si puso la huella despues del horario de salida se le cuenta como falta completa
+        if self.horaLlegada[0] == self.horarioSalida[0] and self.horaLlegada[1] < self.horarioSalida[1] or self.horaLlegada[0] < self.horarioSalida[0]:
+
+            self.entro = True        
 
     # Pone el dedo en la huella al salir
     def getHorarioSalida(self):
@@ -182,12 +190,12 @@ class alumno():
                 return
             
             # ¿LLego justo en la hora? ¿Llego bien con los minutos?
-            elif self.horaLlegada[0] == self.horarioEntrada[0] and self.horaLlegada[1] <= self.horarioEntrada[1]:
+            if self.horaLlegada[0] == self.horarioEntrada[0] and self.horaLlegada[1] <= self.horarioEntrada[1]:
                 self.falta = Sin_falta
                 return
 
             # LLego despues de la hora, pero capaz lo salvan los minutos (?
-            elif self.horaLlegada[0] <= self.horarioEntrada[0] + 1:
+            if self.horaLlegada[0] <= self.horarioEntrada[0] + 1:
 
                 # Se paso por los minutos de llegada, eso ya es un cuarto de falta, pero si se paso por mucho seria otro cuarto de falta mas
                 self.falta += cuarto_falta
@@ -203,6 +211,7 @@ class alumno():
                 return                
 
             else:
+
                 self.falta += media_falta
                 return
                 
@@ -214,6 +223,14 @@ class alumno():
         # Seria una funcion que la modifique sumando la falta que acumulo al valor del atributo que corresponda
         self.faltaTotal + self.falta
 
+class materias:
+    pass
+
+class profesor:
+    pass
+
+class salon:
+    pass
 
 juanito = alumno(
                 2, # faltas
@@ -224,13 +241,9 @@ juanito = alumno(
                 dias.get(time.strftime("%A"))[-1] # Hora de salida
 )
 
+juanito.getHorarioLlegada()
 juanito.medirFalta()
 print(juanito.falta)
 
 horaActual = getHora_minuto()
-#print('Hora actual: {}:{}'.format(horaActual[0], horaActual[1]))
-
-
-
-
-
+#print('Hora actual: {}:{}'.format(horaActual[0], horaActual[1])) 
