@@ -162,9 +162,10 @@ class alumno():
         Completa_falta = 1
 
         # Me parecen muchos if, pero despues vemos si los podemos acomodar mejor
+        # Los return son para que la funcion termine y no se cargue el resto del codigo al pedo
 
         # El alumno nunca llego
-        if self.entro:
+        if self.entro == False:
             self.falta = Completa_falta
 
             # Se corta la funcion, ya que si no llego, no hay mucho mas que ver sobre la falta, y nos evitamos la siguiente rama de decisiones
@@ -180,26 +181,30 @@ class alumno():
                 self.falta = Sin_falta
                 return
             
+            # ¿LLego justo en la hora? ¿Llego bien con los minutos?
+            elif self.horaLlegada[0] == self.horarioEntrada[0] and self.horaLlegada[1] <= self.horarioEntrada[1]:
+                self.falta = Sin_falta
+                return
+
             # LLego despues de la hora, pero capaz lo salvan los minutos (?
+            elif self.horaLlegada[0] <= self.horarioEntrada[0] + 1:
+
+                # Se paso por los minutos de llegada, eso ya es un cuarto de falta, pero si se paso por mucho seria otro cuarto de falta mas
+                self.falta += cuarto_falta
+
+                # Funcion para sumarle 15 minutos al horario que tiene para llegar tarde
+                margenDe15Minutos = sumarMinutos(self.horarioEntrada[1], 15) 
+
+                # Preguntar si el alumno llego dentro de ese margen de 15 minutos
+                # Si se paso por mucho se le suma otro cuarto de falta, completando la media falta, si no, se queda con el cuarto que ya tenia
+                if self.horaLlegada[1] > margenDe15Minutos[1]:
+                    self.falta += media_falta
+
+                return                
+
             else:
-
-                # LLegar 15 minutos mas tarde, o incluso pasarse de la hora es media falta
-                # Este if es una utopia en que la suma de minutos no suma nunca la hora.
-                # Despues acomodo ese caso, de momento me manejo con el famoso 7 y 20 xd
-                if self.horaLlegada[0] > self.horarioEntrada[0]:
-
-                    # Funcion para sumarle 15 minutos al horario que tiene para llegar tarde
-                    margenDe15Minutos = sumarMinutos(self.horarioEntrada[1], 15) 
-
-                    # Preguntar si el alumno llego dentro de ese margen de 15 minutos
-                    if self.horaLlegada[1] > margenDe15Minutos[1]:
-                        self.falta += media_falta
-                    else:
-                        self.falta += cuarto_falta
-
-                # LLego a las 7, pero esta dentro del horario en cuestion de minutos?
-                elif self.horaLlegada[1] < self.horarioEntrada[1]:
-                    self.falta = Sin_falta
+                self.falta += media_falta
+                return
                 
 
     # Funcion que aplica todas las faltas acumuladas
