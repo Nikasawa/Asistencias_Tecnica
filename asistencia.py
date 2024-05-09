@@ -66,7 +66,7 @@ dias = {
     "Monday": [[7, 20], [8, 30], [9, 40], [10, 50], [11, 50]],
     "Tuesday": [[7, 20], [8, 30], [9, 40], [10, 50], [11, 50]],
     "Wednesday": [[7, 20], [8, 30], [9, 40], [10, 50], [11, 50]],
-    "Thursday ": [[7, 20], [8, 30], [9, 40], [10, 50], [11, 50]],
+    "Thursday": [[7, 20], [8, 30], [9, 40], [10, 50], [11, 50]],
     "Friday": [[7, 20], [8, 30], [9, 40], [10, 50], [11, 50]]
 }
 
@@ -96,12 +96,13 @@ class salon():
 # a la que se supone que tiene que entrar y salir.
 class alumno():
     
-    def __init__(self, faltaTotal, faltasJustificadas, dia, jornada, horarioEntrada, horarioSalida):
+    def __init__(self, falta, faltasJustificadas, dia, jornada, horarioEntrada, horarioSalida):
 
         # Faltas y Asistencias, atributos de la BD
-        self.faltaTotal = faltaTotal
+        self.falta = falta
         self.faltasJustificadas = faltasJustificadas
-        self.asistencias = 28 - (faltaTotal - faltasJustificadas)
+        self.faltaTotal = self.falta  + self.faltasJustificadas
+        self.asistencias = 28 - self.falta
 
         # Horarios del alumno
         self.dia = dia
