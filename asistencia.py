@@ -17,7 +17,7 @@
     # Huellas digitales
 
 # Dos vistas distintas de la interfaz:
-    # Preceptories
+    # Preceptores
     # Alumnos
 
 # Mostrar horarios actuales y proxima clase en base al horario actual (Libreria time)
@@ -129,7 +129,7 @@ class alumno():
     # Pone el dedo en la huella al entrar
     def getHorarioLlegada(self):
 
-        # Esta funcion solo peude actuar cuando el alumno entre por primera vez
+        # Esta funcion solo puede actuar cuando el alumno entre por primera vez
         # (Tendriamos que ver que pasa cuando alguien se hace el gracioso y toca varias veces)
         # Intervalo de tiempo para poner el dedo?
 
