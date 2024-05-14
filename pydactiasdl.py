@@ -1,10 +1,10 @@
 import serial
 
-puerto = 'COM'
-ingreso = serial.Serial(puerto)
+PUERTO = 'COM3'
+ingreso = serial.Serial(PUERTO)
 ingreso.timeout = 2.0
 
-print('Se detecto un periferico en el puerto: ' + puerto)
+print('Se detecto un periferico en el puerto: ' + PUERTO)
 
 huella = ingreso.read()
 print('read: {}'.format(huella))

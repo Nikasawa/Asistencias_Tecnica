@@ -24,7 +24,7 @@
 
 """
 Metodologia de trabajo:
-    Nombre de variables: lowCamelCase
+    Nombre de variables: lowerCamelCase
     Dejar un comentario antes de cada funcion a modo de explicacion al resto
     Aunque los comentarios despues pueden quedar desactualizados...
     Podriamos considerar que comentar es una mala practica...
@@ -49,13 +49,13 @@ cursor = conexion.cursor()
 
 # Funcion para conseguir la hora y los minutos actuales
 def getHora_minuto():
+
     # Pedirle el horario y fecha a MySQL
     cursor.execute('SELECT LOCALTIME()')
 
-    # Navegar en el horario devuelto para tomar solo la informacion que queremos
-    for infoDeCursor in cursor.fetchall():
-        for ObtenerHoraDeInfo in infoDeCursor:
-            horario = ObtenerHoraDeInfo
+    # El cursor va a devolver una tupla con varios valores
+    # En la primera posicion de la primera tupla que devuelve, tenemos un objeto que contiene el horario y la fecha
+    horario = cursor.fetchall()[0][0]
 
     # De todos los datos del horario nos quedamos con la hora y los minutos
     return [horario.hour, horario.minute]
@@ -74,13 +74,15 @@ dias = {
 
 def sumarMinutos(min1, min2):
 
-    otraHora = 0
-    minutosTotal = min1 + min2
+    otraHora = 0 # Variable para acumular las horas que se generan por el exceso de minutos
+    minutosTotal = min1 + min2 # Minutos totales ingresados
+    UNA_HORA = 60 # Una hora tiene 60 minutos en total (Esta en mayusculas porque es una constante)
 
-    while minutosTotal >= 60:
-        if minutosTotal >= 60:
+    while minutosTotal >= UNA_HORA:
+
+        if minutosTotal >= UNA_HORA:
             otraHora += 1
-            minutosTotal -= 60
+            minutosTotal -= UNA_HORA
 
     return [otraHora, minutosTotal]
 
@@ -112,7 +114,7 @@ class alumno():
         # Si toca la huella por primera vez quiere decir que entro, 
         # si lo hace por segunda vez quiere decir que se fue
         self.entro = False
-        self.retiro = True
+        self.retiro = False
 
         # Hora a la que tiene que salir y entrar (en teoria)
         self.horarioEntrada = horarioEntrada
@@ -158,7 +160,7 @@ class alumno():
             # Lo que normalmente daria error en la siguiente linea de codigo
             pass
 
-        self.entro = False # Bueno ahora si se fue
+        self.retiro = True # Bueno ahora si se fue
 
     # Funcion que calcula la cantidad de faltas que acumula a lo largo del dia
     def medirFalta(self):
@@ -230,8 +232,6 @@ class materias:
 class profesor:
     pass
 
-class salon:
-    pass
 
 juanito = alumno(
                 2, # faltas

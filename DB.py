@@ -39,7 +39,7 @@ def newTable():
 def addToTable():
 
     # Se toma: La tabla donde se quiere ingresar; los valores que tiene en ella y posteriormente los valores a ingresar; uno por uno
-    cursor.execute("INSERT INTO prueba (fecha) VALUES (%s)", ('03:10:10',))
+    cursor.execute("INSERT INTO prueba (fecha) VALUES (%s)", ('LOCALTIME()',))
 
 # Funcion para eliminar todo de la base de datos (No usar)
 def deleteTable():
@@ -78,17 +78,26 @@ def restarAsistencia():
 El commit es obligatorio para cargar los cambios en la base de datos
 """
 
+def conseguirHoraActual():
 
-cursor.execute('SELECT LOCALTIME();')
+    cursor.execute('SELECT LOCALTIME();')
+        
+    tiempoSQL = cursor.fetchall()[0][0]
 
-for x in cursor.fetchall():
-    for y in x:
-        tiempoSQL = y
+    segundos = tiempoSQL.second
+    minutos = tiempoSQL.minute
+    horas = tiempoSQL.hour
 
-segundos = tiempoSQL.second
-minutos = tiempoSQL.minute
-horas = tiempoSQL.hour
+    cursor.execute("INSERT INTO prueba (fecha) VALUES (%s)", (tiempoSQL, ))
 
-print(segundos)
-print(minutos)
-print(horas)
+def conseguirHoraTabla():
+
+    cursor.execute('SELECT fecha FROM prueba')
+
+    for x in cursor.fetchall():
+        for y in x:
+            print(y.year)
+
+
+conexion.commit()
+conseguirHoraActual()
