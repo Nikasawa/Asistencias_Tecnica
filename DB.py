@@ -99,5 +99,5 @@ def conseguirHoraTabla():
             print(y.year)
 
 
-conexion.commit()
-conseguirHoraActual()
+for x in range(2):
+    print(x)

@@ -60,12 +60,15 @@ def getHora_minuto():
     # De todos los datos del horario nos quedamos con la hora y los minutos
     return [horario.hour, horario.minute]
 
+# Horarios en los que se retiran normalmente los alumnos
+HORARIOS_SALIDA = [[11, 50], [17, 50], [22, 30]]
+
 # Los dias estan en ingles porque asi los devuelve la libreria time
 # (Si, googlie los nombres en ingles porque no me los acordaba)
 dias = {
-    "Monday": [[7, 20], [8, 30], [9, 40], [10, 50], [11, 50]],
+    "Monday": [[7, 20], [8, 30], [9, 40], [10, 50], [11, 50], [1, 20], [2, 30], [3, 40], [4, 50], [5, 50]],
     "Tuesday": [[7, 20], [8, 30], [9, 40], [10, 50], [11, 50]],
-    "Wednesday": [[7, 20], [8, 30], [9, 40], [10, 50], [11, 50]],
+    "Wednesday": [[7, 20], [8, 30], [9, 40], [10, 50], [11, 50] [13, 20], [14, 30], [15, 40], [16, 50], [17, 50]],
     "Thursday": [[7, 20], [8, 30], [9, 40], [10, 50], [11, 50]],
     "Friday": [[7, 20], [8, 30], [9, 40], [10, 50], [11, 50]]
 }
@@ -86,6 +89,23 @@ def sumarMinutos(min1, min2):
 
     return [otraHora, minutosTotal]
 
+# Para comparar los dos horarios se tienen que ingresar dos horarios en arrays como formato [HORA, MINUTOS]
+# Se pregunta si el primer horario es mayor que el segundo
+# Si son iguales, se devuelve False
+def compararHoras(primerHorario, segundoHorario):
+
+    for index in range(2):
+
+        if primerHorario[index] > segundoHorario[index]:
+            return True
+    
+        if segundoHorario[index] > primerHorario[index]:
+            return False
+        
+    return False
+    
+        
+
 # Hay que hacer una clase para cada entidad? Alta paja xddd
 
 # Esto es una clase para el grupo de alumnos entero, ya que seria mas comodo tener a todos
@@ -98,7 +118,7 @@ class salon():
 # a la que se supone que tiene que entrar y salir.
 class alumno():
     
-    def __init__(self, falta, faltasJustificadas, dia, jornada, horarioEntrada, horarioSalida):
+    def __init__(self, falta, faltasJustificadas, dia, jornada):
 
         # Faltas y Asistencias, atributos de la BD
         self.falta = falta
@@ -106,9 +126,36 @@ class alumno():
         self.faltaTotal = self.falta  + self.faltasJustificadas
         self.asistencias = 28 - self.falta
 
+
+        ###### TODO LO DE LOS HORARIOS DEBERIA ESTAR EN OTRA FUNCION PARA DECLARARLOS ######
+        ###### YA QUE NO ES NECESARIO CARGARLOS SI SOLO ESTAN VIENDO AL ALUMNO EN LA TABLA ######
+
         # Horarios del alumno
         self.dia = dia
         self.jornada = jornada
+
+        # De los horarios, tomamos la hora a la que entra y a la que sale, respetando los turnos
+        # Hora a la que tiene que salir y entrar (en teoria)
+        self.horarioEntrada = [self.jornada[0]]
+        self.horarioSalida = []
+
+        # Analiza la jornada de los alumnos para determinar en que turno deben estar
+        # La documentacion esta en una hoja.
+        for hora1 in HORARIOS_SALIDA: 
+
+            for hora2 in self.jornada:
+                
+                if compararHoras(hora2, hora1):
+
+                    self.horarioEntrada.append(hora2)
+                    self.horarioSalida.append(horario)
+
+                    break
+
+                horario = hora2
+
+        # Se añade el ultimo valor de la jornada, es uno que no revisan los for
+        self.horarioSalida.append(self.jornada[-1])
 
         # Variable que muestra si llego o no a la escuela. 
         # Si toca la huella por primera vez quiere decir que entro, 
@@ -116,15 +163,15 @@ class alumno():
         self.entro = False
         self.retiro = False
 
-        # Hora a la que tiene que salir y entrar (en teoria)
-        self.horarioEntrada = horarioEntrada
-        self.horarioSalida = horarioSalida
-
+        # Hora a la que entra y sale el alumno (Pone el dedo en la huela)
         self.horaLlegada = "No entro" # Despues se cambia por la hora, una lista con la hora y los minutos: [hora, minuto]
         self.horaSalida = "No salio" # Despues se cambia por la hora
 
         # cantidad de falta que acumula en el dia por llegada tarde, retiros, etc.
         self.falta = 0
+
+    def getTurnos():
+        pass
 
     # Pone el dedo en la huella al entrar
     def getHorarioLlegada(self):
@@ -238,13 +285,8 @@ juanito = alumno(
                 1, # faltas justificadas
                 time.strftime("%A"), # Dia actual
                 dias.get(time.strftime("%A")), # Horario total
-                dias.get(time.strftime("%A"))[0], # Hora de llegada 
-                dias.get(time.strftime("%A"))[-1] # Hora de salida
 )
 
-juanito.getHorarioLlegada()
-juanito.medirFalta()
-print(juanito.falta)
 
 horaActual = getHora_minuto()
 #print('Hora actual: {}:{}'.format(horaActual[0], horaActual[1])) 
