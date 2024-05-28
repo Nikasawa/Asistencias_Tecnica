@@ -35,12 +35,6 @@ def newTable():
     # (255): Maxima cantidad de caracteres
     cursor.execute("CREATE TABLE alumnos (ID int AUTOINCREMENT nombre VARCHAR(255), apellido VARCHAR(255), )")
 
-# Añadir algo a la tabla
-def addToTable():
-
-    # Se toma: La tabla donde se quiere ingresar; los valores que tiene en ella y posteriormente los valores a ingresar; uno por uno
-    cursor.execute("INSERT INTO prueba (fecha) VALUES (%s)", ('LOCALTIME()',))
-
 # Funcion para eliminar todo de la base de datos (No usar)
 def deleteTable():
     cursor.execute("DELETE FROM prueba WHERE 1")
@@ -88,16 +82,35 @@ def conseguirHoraActual():
     minutos = tiempoSQL.minute
     horas = tiempoSQL.hour
 
-    cursor.execute("INSERT INTO prueba (fecha) VALUES (%s)", (tiempoSQL, ))
+    cursor.execute("INSERT INTO prueba (fecha) VALUES (%s)", ('{0}-{1}-{2} {3}:{4}:{5}'.format(tiempoSQL.year, 
+                                                                                                tiempoSQL.month, 
+                                                                                                tiempoSQL.day,
+                                                                                                tiempoSQL.hour,
+                                                                                                tiempoSQL.minute,
+                                                                                                tiempoSQL.second
+    )))
+
+
+# Añadir algo a la tabla
+def addToTable():
+
+    # Se toma: La tabla donde se quiere ingresar; los valores que tiene en ella y posteriormente los valores a ingresar; uno por uno
+    
+    cursor.execute("INSERT INTO prueba (fecha) VALUES (%s)", ('LOCALTIME()',))
+
+
 
 def conseguirHoraTabla():
 
     cursor.execute('SELECT fecha FROM prueba')
 
     for x in cursor.fetchall():
+        print(x)
         for y in x:
-            print(y.year)
+            
+            print(y)
 
+#addToTable()
+conseguirHoraActual()
 
-for x in range(2):
-    print(x)
+conexion.commit()
