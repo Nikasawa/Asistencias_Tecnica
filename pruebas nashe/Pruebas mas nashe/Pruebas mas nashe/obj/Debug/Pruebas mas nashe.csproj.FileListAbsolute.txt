@@ -1,0 +1,10 @@
+C:\Users\jonas\OneDrive\Documentos\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\Pruebas mas nashe.exe.config
+C:\Users\jonas\OneDrive\Documentos\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\Pruebas mas nashe.exe
+C:\Users\jonas\OneDrive\Documentos\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\Pruebas mas nashe.pdb
+C:\Users\jonas\OneDrive\Documentos\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\obj\Debug\Pruebas mas nashe.csproj.AssemblyReference.cache
+C:\Users\jonas\OneDrive\Documentos\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\obj\Debug\Pruebas_mas_nashe.Form1.resources
+C:\Users\jonas\OneDrive\Documentos\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\obj\Debug\Pruebas_mas_nashe.Properties.Resources.resources
+C:\Users\jonas\OneDrive\Documentos\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\obj\Debug\Pruebas mas nashe.csproj.GenerateResource.cache
+C:\Users\jonas\OneDrive\Documentos\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\obj\Debug\Pruebas mas nashe.csproj.CoreCompileInputs.cache
+C:\Users\jonas\OneDrive\Documentos\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\obj\Debug\Pruebas mas nashe.exe
+C:\Users\jonas\OneDrive\Documentos\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\obj\Debug\Pruebas mas nashe.pdb
