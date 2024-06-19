@@ -12,9 +12,8 @@ namespace UI_Support {
     /// 
     [STAThread]
     static void Main() {
-      Console.WriteLine("Hola Cracks De La Informatica!");
-            Console.WriteLine("Viva la pepa!");
-            Application.EnableVisualStyles();
+      Console.WriteLine("Hello Word!");
+      Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
       Application.Run(new MainForm());
     }

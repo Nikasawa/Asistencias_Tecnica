@@ -97,7 +97,7 @@ namespace UI_Support
             // 
             // Mask
             // 
-            this.Mask.Location = new System.Drawing.Point(109, 27);
+            this.Mask.Location = new System.Drawing.Point(160, 27);
             this.Mask.Maximum = new decimal(new int[] {
             1023,
             0,
@@ -196,8 +196,8 @@ namespace UI_Support
             // 
             // gbReturnValues
             // 
-            gbReturnValues.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            gbReturnValues.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             gbReturnValues.Controls.Add(this.FalseAcceptRate);
             gbReturnValues.Controls.Add(lblFalseAcceptRate);
             gbReturnValues.Controls.Add(this.IsFeatureSetMatched);

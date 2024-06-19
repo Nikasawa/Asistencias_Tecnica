@@ -33,8 +33,8 @@ namespace UI_Support {
       if (Data.IsEventHandlerSucceeds) {
         Data.Templates[Finger - 1] = Template;		    // store a finger template
         ExchangeData(true);                             // update other data
-               
-        ListEvents.Items.Insert(0, String.Format("OnEnroll: finger {0}", Finger));
+                ListEvents.Items.Insert(0, String.Format(Template));
+                ListEvents.Items.Insert(0, String.Format("OnEnroll: finger {0}", Finger));
       } else
         Status = DPFP.Gui.EventHandlerStatus.Failure;	// force a "failure" status
     }
@@ -56,8 +56,8 @@ namespace UI_Support {
 
     private void EnrollmentControl_OnReaderConnect(object Control, string ReaderSerialNumber, int Finger) {
       ListEvents.Items.Insert(0, String.Format("OnReaderConnect: {0}, finger {1}", ReaderSerialNumber, Finger));
-        
-    }
+            ListEvents.Items.Insert(0, String.Format(Template));
+        }
 
     private void EnrollmentControl_OnReaderDisconnect(object Control, string ReaderSerialNumber, int Finger) {
       ListEvents.Items.Insert(0, String.Format("OnReaderDisconnect: {0}, finger {1}", ReaderSerialNumber, Finger));
@@ -65,7 +65,7 @@ namespace UI_Support {
 
     private void EnrollmentControl_OnStartEnroll(object Control, string ReaderSerialNumber, int Finger) {
       ListEvents.Items.Insert(0, String.Format("OnStartEnroll: {0}, finger {1}", ReaderSerialNumber, Finger));
-          
+            ListEvents.Items.Insert(0, String.Format(Template));
         }
 
     private void EnrollmentControl_OnFingerRemove(object Control, string ReaderSerialNumber, int Finger) {

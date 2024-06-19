@@ -1,0 +1,19 @@
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\obj\Debug\UISupportSample CS.csproj.AssemblyReference.cache
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\obj\Debug\UI_Support.EnrollmentForm.resources
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\obj\Debug\UI_Support.MainForm.resources
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\obj\Debug\UI_Support.Properties.Resources.resources
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\obj\Debug\UI_Support.VerificationForm.resources
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\obj\Debug\UISupportSample CS.csproj.GenerateResource.cache
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\obj\Debug\UISupportSample CS.csproj.CoreCompileInputs.cache
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\UISupportSample CS.exe.config
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\UISupportSample CS.exe
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\UISupportSample CS.pdb
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\DPFPGuiNET.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\DPFPShrNET.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\DPFPVerNET.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\DPFPCtlXWrapperNET.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\DPFPCtlXTypeLibNET.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\DPFPShrXTypeLibNET.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\obj\Debug\UISuppor.3ECEC80B.Up2Date
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\obj\Debug\UISupportSample CS.exe
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\obj\Debug\UISupportSample CS.pdb
