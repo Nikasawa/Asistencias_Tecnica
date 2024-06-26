@@ -1,10 +1,3 @@
-C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\obj\Debug\UISupportSample CS.csproj.AssemblyReference.cache
-C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\obj\Debug\UI_Support.EnrollmentForm.resources
-C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\obj\Debug\UI_Support.MainForm.resources
-C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\obj\Debug\UI_Support.Properties.Resources.resources
-C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\obj\Debug\UI_Support.VerificationForm.resources
-C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\obj\Debug\UISupportSample CS.csproj.GenerateResource.cache
-C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\obj\Debug\UISupportSample CS.csproj.CoreCompileInputs.cache
 C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\UISupportSample CS.exe.config
 C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\UISupportSample CS.exe
 C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\UISupportSample CS.pdb
@@ -14,6 +7,44 @@ C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\DPFPVerNET
 C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\DPFPCtlXWrapperNET.dll
 C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\DPFPCtlXTypeLibNET.dll
 C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\DPFPShrXTypeLibNET.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\obj\Debug\UISupportSample CS.csproj.AssemblyReference.cache
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\obj\Debug\UI_Support.EnrollmentForm.resources
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\obj\Debug\UI_Support.MainForm.resources
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\obj\Debug\UI_Support.Properties.Resources.resources
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\obj\Debug\UI_Support.VerificationForm.resources
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\obj\Debug\UISupportSample CS.csproj.GenerateResource.cache
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\obj\Debug\UISupportSample CS.csproj.CoreCompileInputs.cache
 C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\obj\Debug\UISuppor.3ECEC80B.Up2Date
 C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\obj\Debug\UISupportSample CS.exe
 C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\obj\Debug\UISupportSample CS.pdb
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\Google.Protobuf.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\MySql.Data.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\System.Buffers.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\System.IO.Pipelines.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\System.Memory.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\ZstdSharp.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\Google.Protobuf.pdb
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\Google.Protobuf.xml
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\MySql.Data.xml
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\System.Buffers.xml
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\System.IO.Pipelines.xml
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\System.Memory.xml
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\UI Support\bin\Debug\System.Threading.Tasks.Extensions.xml

@@ -22,7 +22,9 @@ namespace UI_Support {
         Data.EnrolledFingersMask = EnrollmentControl.EnrolledFingerMask;
         Data.MaxEnrollFingerCount = EnrollmentControl.MaxEnrollFingerCount;
         Data.Update();
-      } else {	// read values from the data object to the form's controls
+                // Console.WriteLine(Data.EnrolledFingersMask);
+                Console.WriteLine(Data.MaxEnrollFingerCount);
+            } else {	// read values from the data object to the form's controls
         EnrollmentControl.EnrolledFingerMask = Data.EnrolledFingersMask;
         EnrollmentControl.MaxEnrollFingerCount = Data.MaxEnrollFingerCount;
       }
