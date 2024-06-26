@@ -25,8 +25,18 @@ namespace UI_Support {
           ver.Verify(FeatureSet, template, ref res);
           Data.IsFeatureSetMatched = res.Verified;
           Data.FalseAcceptRate = res.FARAchieved;
-          if (res.Verified)
-            break; // success
+
+                    Console.WriteLine("template");
+                    Console.WriteLine(template);
+
+                    Console.WriteLine("Ver, verify, FeatureSet");
+                    Console.WriteLine(res.Verified);
+                    Console.WriteLine(FeatureSet);
+                    if (res.Verified)
+                    {
+                        Console.WriteLine(Data.Templates);
+                        break; // success
+                    }
         }
       }
 

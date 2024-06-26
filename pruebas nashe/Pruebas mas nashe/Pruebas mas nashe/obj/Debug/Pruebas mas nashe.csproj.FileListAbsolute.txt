@@ -8,3 +8,45 @@ C:\Users\jonas\OneDrive\Documentos\GitHub\Asistencias_Tecnica\pruebas nashe\Prue
 C:\Users\jonas\OneDrive\Documentos\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\obj\Debug\Pruebas mas nashe.csproj.CoreCompileInputs.cache
 C:\Users\jonas\OneDrive\Documentos\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\obj\Debug\Pruebas mas nashe.exe
 C:\Users\jonas\OneDrive\Documentos\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\obj\Debug\Pruebas mas nashe.pdb
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\Pruebas mas nashe.exe.config
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\Pruebas mas nashe.exe
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\Pruebas mas nashe.pdb
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\obj\Debug\Pruebas mas nashe.csproj.AssemblyReference.cache
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\obj\Debug\Pruebas_mas_nashe.Form1.resources
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\obj\Debug\Pruebas_mas_nashe.Properties.Resources.resources
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\obj\Debug\Pruebas mas nashe.csproj.GenerateResource.cache
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\obj\Debug\Pruebas mas nashe.csproj.CoreCompileInputs.cache
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\obj\Debug\Pruebas mas nashe.exe
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\obj\Debug\Pruebas mas nashe.pdb
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\Google.Protobuf.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\MySql.Data.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\System.Buffers.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\System.IO.Pipelines.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\System.Memory.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\ZstdSharp.dll
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\Google.Protobuf.pdb
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\Google.Protobuf.xml
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\MySql.Data.xml
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\System.Buffers.xml
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\System.IO.Pipelines.xml
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\System.Memory.xml
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Pc\Documents\GitHub\Asistencias_Tecnica\pruebas nashe\Pruebas mas nashe\Pruebas mas nashe\obj\Debug\Pruebas .8D4CE54E.Up2Date
