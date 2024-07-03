@@ -17,6 +17,23 @@ namespace UI_Support
 	//
 	public class AppData
     {
+
+        public const int MaxFingers = 10;
+		// shared data
+        public int EnrolledFingersMask = 0;
+		public int MaxEnrollFingerCount = MaxFingers;
+        public bool IsEventHandlerSucceeds = true;
+        public bool IsFeatureSetMatched = false;
+        public int FalseAcceptRate = 0;
+		public DPFP.Template[] Templates = new DPFP.Template[MaxFingers]; // Cambiar por huellas almacenadas en base de datos
+
+		// data change notification
+		public void Update() { OnChange(); }		// just fires the OnChange() event
+		public event OnChangeHandler OnChange;
+	}
+
+	public class Conexion
+	{
         private string IP = "localhost";
         private string BaseDeDatos = "asistencias";
         private string Usuario = "root";
@@ -24,7 +41,7 @@ namespace UI_Support
         private string cadenaConexion;
         private MySqlConnection conexion;
 
-        public void Conexion()
+        public Conexion()
         {
             cadenaConexion = "Database=" + BaseDeDatos +
                              "; DataSource=" + IP +
@@ -44,18 +61,5 @@ namespace UI_Support
             return conexion;
 
         }
-
-        public const int MaxFingers = 10;
-		// shared data
-        public int EnrolledFingersMask = 0;
-		public int MaxEnrollFingerCount = MaxFingers;
-        public bool IsEventHandlerSucceeds = true;
-        public bool IsFeatureSetMatched = false;
-        public int FalseAcceptRate = 0;
-		public DPFP.Template[] Templates = new DPFP.Template[MaxFingers]; // Cambiar por huellas almacenadas en base de datos
-
-		// data change notification
-		public void Update() { OnChange(); }		// just fires the OnChange() event
-		public event OnChangeHandler OnChange;
-	}
+    }
 }
