@@ -55,5 +55,9 @@ namespace UI_Support {
     private EnrollmentForm Enroller;
     private VerificationForm Verifier;
 
-  }
+        private void Mask_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

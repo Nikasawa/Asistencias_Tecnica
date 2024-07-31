@@ -1,3 +1,5 @@
+using DPFP;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,6 +13,7 @@ namespace UI_Support {
     // Constructor
     public EnrollmentForm(AppData data) {
       InitializeComponent();
+      conexion.getConexion();
       Data = data;										// Keep reference to the data
       ExchangeData(true);									// Init data with default control values;
       Data.OnChange += delegate { ExchangeData(false); };	// Track data changes to keep the form synchronized
@@ -22,8 +25,10 @@ namespace UI_Support {
         Data.EnrolledFingersMask = EnrollmentControl.EnrolledFingerMask;
         Data.MaxEnrollFingerCount = EnrollmentControl.MaxEnrollFingerCount;
         Data.Update();
+
                 // Console.WriteLine(Data.EnrolledFingersMask);
-                Console.WriteLine(Data.MaxEnrollFingerCount);
+                // Console.WriteLine(Data.MaxEnrollFingerCount);
+
             } else {	// read values from the data object to the form's controls
         EnrollmentControl.EnrolledFingerMask = Data.EnrolledFingersMask;
         EnrollmentControl.MaxEnrollFingerCount = Data.MaxEnrollFingerCount;
@@ -33,10 +38,11 @@ namespace UI_Support {
     // event handling
     public void EnrollmentControl_OnEnroll(Object Control, int Finger, DPFP.Template Template, ref DPFP.Gui.EventHandlerStatus Status) {
       if (Data.IsEventHandlerSucceeds) {
-        Data.Templates[Finger - 1] = Template;		    // store a finger template
-        ExchangeData(true);								// update other data
+        //Data.Templates[Finger - 1] = Template;          // store a finger template
+                ExchangeData(true);
+                GuardarHuella("pruebahuella", "Crack (Cuello)", Template);
 
-        ListEvents.Items.Insert(0, String.Format("OnEnroll: finger {0}", Finger));
+                ListEvents.Items.Insert(0, String.Format("OnEnroll: finger {0}", Finger));
       } else
         Status = DPFP.Gui.EventHandlerStatus.Failure;	// force a "failure" status
     }
@@ -93,5 +99,24 @@ namespace UI_Support {
         {
 
         }
+    void GuardarHuella(string tabla, string nombre, Template template)
+    {
+        if (conexion.getConexion() == null)
+        {
+            Console.WriteLine("No se conecto a la base de datos");
+            return;
+        }
+
+        string consulta = $"INSERT INTO " + tabla + "  (Nombre, Huella1) VALUES (@Nombre, @Huella1)";
+        MySqlCommand comando = new MySqlCommand(consulta, conexion.getConexion());
+        comando.Parameters.AddWithValue("@Nombre", nombre);
+        comando.Parameters.AddWithValue("@Huella1", template.Bytes);
+        comando.ExecuteReader();
+        comando.ExecuteReader().Close();
     }
+
+    private Conexion conexion = new Conexion();
+    }
+
+
 }

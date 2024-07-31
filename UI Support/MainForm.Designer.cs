@@ -107,6 +107,12 @@ namespace UI_Support
             this.Mask.Size = new System.Drawing.Size(94, 20);
             this.Mask.TabIndex = 1;
             this.ToolTip.SetToolTip(this.Mask, "Enter a number from 0 to 1023");
+            this.Mask.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.Mask.ValueChanged += new System.EventHandler(this.Mask_ValueChanged);
             // 
             // EnrollButton
             // 
@@ -196,8 +202,8 @@ namespace UI_Support
             // 
             // gbReturnValues
             // 
-            gbReturnValues.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            gbReturnValues.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             gbReturnValues.Controls.Add(this.FalseAcceptRate);
             gbReturnValues.Controls.Add(lblFalseAcceptRate);
             gbReturnValues.Controls.Add(this.IsFeatureSetMatched);

@@ -20,7 +20,7 @@ namespace UI_Support
 
         public const int MaxFingers = 10;
 		// shared data
-        public int EnrolledFingersMask = 0;
+        public int EnrolledFingersMask = 1;
 		public int MaxEnrollFingerCount = MaxFingers;
         public bool IsEventHandlerSucceeds = true;
         public bool IsFeatureSetMatched = false;
