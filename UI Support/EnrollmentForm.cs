@@ -40,7 +40,7 @@ namespace UI_Support {
       if (Data.IsEventHandlerSucceeds) {
         //Data.Templates[Finger - 1] = Template;          // store a finger template
                 ExchangeData(true);
-                GuardarHuella("pruebahuella", "Crack (Cuello)", Template);
+                GuardarHuella("pruebahuella", "DaniPeloDuro", Template);
 
                 ListEvents.Items.Insert(0, String.Format("OnEnroll: finger {0}", Finger));
       } else
@@ -95,10 +95,11 @@ namespace UI_Support {
       this.ListEvents.Items.Clear();
     }
 
-        private void EnrollmentControl_Load(object sender, EventArgs e)
-        {
+    private void EnrollmentControl_Load(object sender, EventArgs e)
+    {
 
-        }
+    }
+
     void GuardarHuella(string tabla, string nombre, Template template)
     {
         if (conexion.getConexion() == null)
@@ -107,12 +108,17 @@ namespace UI_Support {
             return;
         }
 
-        string consulta = $"INSERT INTO " + tabla + "  (Nombre, Huella1) VALUES (@Nombre, @Huella1)";
-        MySqlCommand comando = new MySqlCommand(consulta, conexion.getConexion());
-        comando.Parameters.AddWithValue("@Nombre", nombre);
-        comando.Parameters.AddWithValue("@Huella1", template.Bytes);
-        comando.ExecuteReader();
-        comando.ExecuteReader().Close();
+            string consulta = $"INSERT INTO " + tabla + "  (Nombre, Huella1) VALUES (@Nombre, @Huella1)";
+
+            using (MySqlCommand comando = new MySqlCommand(consulta, conexion.getConexion()))
+            {
+                comando.Parameters.AddWithValue("@Nombre", nombre);
+                comando.Parameters.AddWithValue("@Huella1", template.Bytes);
+                comando.ExecuteReader();
+            }
+                
+        
+        
     }
 
     private Conexion conexion = new Conexion();

@@ -1,0 +1,5 @@
+(Puede que haya confundido los dos pero de ultima le cambiamos los nombres a los archivos :/)
+
+Tecnico: Hay que escribir con nuestras palabras lo que nosotros creemos que tenemos que hacer para que el prorama funcione
+
+Practico: Es el informe tecnico llevado a la practica, teniendo en cuenta requisitos, herramientas, justificacion de nuestra organizacion y eleccion de procesos
