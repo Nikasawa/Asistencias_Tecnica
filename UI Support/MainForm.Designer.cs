@@ -177,6 +177,7 @@ namespace UI_Support
             lblMask.TabIndex = 0;
             lblMask.Text = "Fingerprint Mask";
             lblMask.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            lblMask.Click += new System.EventHandler(this.lblMask_Click);
             // 
             // gbVerification
             // 

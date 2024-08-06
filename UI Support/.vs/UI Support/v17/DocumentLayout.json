@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "VerificationForm.cs",
               "ToolTip": "C:\\Users\\Pc\\Documents\\GitHub\\Asistencias_Tecnica\\UI Support\\VerificationForm.cs",
               "RelativeToolTip": "VerificationForm.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAADYAAAANAAAA",
+              "ViewState": "AQIAAGcAAAAAAAAAAAAAAHgAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-08T23:54:01.603Z",
               "EditorCaption": ""
@@ -53,7 +53,7 @@
               "RelativeDocumentMoniker": "EnrollmentForm.cs",
               "ToolTip": "C:\\Users\\Pc\\Documents\\GitHub\\Asistencias_Tecnica\\UI Support\\EnrollmentForm.cs",
               "RelativeToolTip": "EnrollmentForm.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAF8AAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-08T23:53:56.1Z",
               "EditorCaption": ""
@@ -68,8 +68,7 @@
               "RelativeToolTip": "AppData.cs",
               "ViewState": "AQIAABIAAAAAAAAAAAAAABwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-08T23:53:23.358Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-08T23:53:23.358Z"
             },
             {
               "$type": "Document",
@@ -81,8 +80,17 @@
               "RelativeToolTip": "asistencia.cs",
               "ViewState": "AQIAAFQAAAAAAAAAAAAAAMkAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T21:57:02.327Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-04T21:57:02.327Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1304,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
             }
           ]
         }

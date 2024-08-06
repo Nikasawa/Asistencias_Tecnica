@@ -59,5 +59,10 @@ namespace UI_Support {
         {
 
         }
+
+        private void lblMask_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
