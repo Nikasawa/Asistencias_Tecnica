@@ -49,14 +49,15 @@ namespace UI_Support
             // 
             // lblPrompt
             // 
-            lblPrompt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            lblPrompt.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             lblPrompt.Location = new System.Drawing.Point(67, 13);
             lblPrompt.Name = "lblPrompt";
             lblPrompt.Size = new System.Drawing.Size(228, 43);
             lblPrompt.TabIndex = 3;
             lblPrompt.Text = "To verify your identity, touch fingerprint reader with any enrolled finger.";
+            lblPrompt.Click += new System.EventHandler(this.lblPrompt_Click);
             // 
             // VerificationControl
             // 

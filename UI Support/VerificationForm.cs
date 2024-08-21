@@ -138,7 +138,11 @@ namespace UI_Support
 
         private AppData Data;
         private Conexion conexion = new Conexion();
-        
+
+        private void lblPrompt_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }
