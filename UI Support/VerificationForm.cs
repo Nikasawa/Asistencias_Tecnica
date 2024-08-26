@@ -1,5 +1,6 @@
 using DPFP;
 using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI.Common;
 using System;
 using System.IO;
 using System.Runtime.ConstrainedExecution;
@@ -90,8 +91,58 @@ namespace UI_Support
             Console.WriteLine(Data.Templates);
         }
 
+        // Funcion para dar de baja
+        // Los parametros de entrada hay que cambiarlo en cuanto tengamos formas de input y output en la interfaz
+        void DarDeBaja(string tabla, int ID)
+        {
+
+            string consulta = '';
+            MySqlCommand comando = null;
+
+            // Recupera todo la informacion de la persona seleccionada
+            consulta = $"SELECT * FROM " + tabla + " WHERE ID = " + ID.ToString();
+
+            string Nombre;
+            string Apellido;
+
+            using (comando = new MySqlCommand(consulta, conexion))
+            {
+                MySqlDataReader result = comando.ExecuteReader();
+
+                if (result.Read())
+                {
+                    // De momento solo se toma el nombre y el apellido porque no sabemos que debe tener realmente la tabla de bajas
+                    Nombre = result.GetString("Nombre");
+                    Apellido = result.GetString("Apellido");
+                }
+            }
+
+            // Enviarlo a la tabla de bajas
+            consulta = $"INSERT (Nombre, Apellido) INTO " + tabla + " VALUES (@Nombre, @Apellido)";
+
+            using (comando = new MySqlCommand(consulta, conexion))
+            {
+                comando.Parameters.AddWithValue("@Nombre", Nombre);
+                comando.Parameters.AddWithValue("@Apellido", Apellido);
+                comando.ExecuteReader();
+            }
+
+            // Elimina de la tabla seleccionada 
+            consulta = $"DELETE FROM " + tabla + " WHERE ID = " + ID.ToString();
+
+            using (comando = new MySqlCommand(consulta, conexion)) {
+                comando.ExecuteReader()
+            }
+
+        }
+
         private AppData Data;
         private Conexion conexion = new Conexion();
-        
+
+        private void lblPrompt_Click(object sender, EventArgs e)
+        {
+
+        }
     }
+    
 }
