@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Pc\\Documents\\GitHub\\Asistencias_Tecnica\\UI Support\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0213BBFD-C87D-414A-A52D-00C5C620182A}|UISupportSample CS.csproj|c:\\users\\pc\\documents\\github\\asistencias_tecnica\\ui support\\verificationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0213BBFD-C87D-414A-A52D-00C5C620182A}|UISupportSample CS.csproj|solutionrelative:verificationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0213BBFD-C87D-414A-A52D-00C5C620182A}|UISupportSample CS.csproj|c:\\users\\pc\\documents\\github\\asistencias_tecnica\\ui support\\verificationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{0213BBFD-C87D-414A-A52D-00C5C620182A}|UISupportSample CS.csproj|solutionrelative:verificationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0213BBFD-C87D-414A-A52D-00C5C620182A}|UISupportSample CS.csproj|c:\\users\\pc\\documents\\github\\asistencias_tecnica\\ui support\\enrollmentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0213BBFD-C87D-414A-A52D-00C5C620182A}|UISupportSample CS.csproj|solutionrelative:enrollmentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0213BBFD-C87D-414A-A52D-00C5C620182A}|UISupportSample CS.csproj|C:\\Users\\Pc\\Documents\\GitHub\\Asistencias_Tecnica\\UI Support\\enrollmentform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -34,37 +26,15 @@
       "DocumentGroups": [
         {
           "DockedHeight": 333,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "VerificationForm.cs",
-              "DocumentMoniker": "C:\\Users\\Pc\\Documents\\GitHub\\Asistencias_Tecnica\\UI Support\\VerificationForm.cs",
-              "RelativeDocumentMoniker": "VerificationForm.cs",
-              "ToolTip": "C:\\Users\\Pc\\Documents\\GitHub\\Asistencias_Tecnica\\UI Support\\VerificationForm.cs",
-              "RelativeToolTip": "VerificationForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-05T01:04:31.824Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EnrollmentForm.cs",
-              "DocumentMoniker": "C:\\Users\\Pc\\Documents\\GitHub\\Asistencias_Tecnica\\UI Support\\EnrollmentForm.cs",
-              "RelativeDocumentMoniker": "EnrollmentForm.cs",
-              "ToolTip": "C:\\Users\\Pc\\Documents\\GitHub\\Asistencias_Tecnica\\UI Support\\EnrollmentForm.cs",
-              "RelativeToolTip": "EnrollmentForm.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAAwGMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-05T01:04:11.864Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "VerificationForm.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Pc\\Documents\\GitHub\\Asistencias_Tecnica\\UI Support\\VerificationForm.cs",
               "RelativeDocumentMoniker": "VerificationForm.cs",
@@ -75,28 +45,19 @@
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "EnrollmentForm.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Pc\\Documents\\GitHub\\Asistencias_Tecnica\\UI Support\\EnrollmentForm.cs",
               "RelativeDocumentMoniker": "EnrollmentForm.cs",
               "ToolTip": "C:\\Users\\Pc\\Documents\\GitHub\\Asistencias_Tecnica\\UI Support\\EnrollmentForm.cs [Dise\u00F1o]",
               "RelativeToolTip": "EnrollmentForm.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-02T21:39:49.87Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-09-02T21:39:49.87Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\Users\\Pc\\Documents\\GitHub\\Asistencias_Tecnica\\UI Support\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
@@ -108,7 +69,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "MainForm.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Pc\\Documents\\GitHub\\Asistencias_Tecnica\\UI Support\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",

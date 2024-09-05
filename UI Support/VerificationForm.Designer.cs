@@ -86,6 +86,7 @@ namespace UI_Support
             this.Name = "VerificationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Verify Your Identity";
+            this.Load += new System.EventHandler(this.VerificationForm_Load);
             this.ResumeLayout(false);
 
         }
