@@ -40,7 +40,7 @@ namespace UI_Support {
       if (Data.IsEventHandlerSucceeds) {
         //Data.Templates[Finger - 1] = Template;          // store a finger template
                 ExchangeData(true);
-                GuardarHuella("pruebahuella", "DaniPeloDuro", Template);
+                GuardarHuella("pruebahuella", "El mascapito", Template);
 
                 ListEvents.Items.Insert(0, String.Format("OnEnroll: finger {0}", Finger));
       } else

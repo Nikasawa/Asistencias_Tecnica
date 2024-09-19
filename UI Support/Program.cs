@@ -15,22 +15,8 @@ namespace UI_Support {
       Application.Run(new MainForm());
 
             
-            conexion.getConexion();
 
-            string consulta = "SELECT NOW()";
-
-            using (MySqlCommand comando = new MySqlCommand(consulta, conexion))
-            {
-                object result = comando.ExecuteReader();
-
-                if (result != null)
-                {
-                    DateTime hora = Convert.ToDateTime(result);
-                    Console.WriteLine(hora.ToString("HH:mm:ss"));
-                }
-            }
         
     }
-        Conexion conexion = new Conexion();
    }
 }

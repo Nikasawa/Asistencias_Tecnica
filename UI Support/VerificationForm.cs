@@ -13,7 +13,7 @@ namespace UI_Support
       InitializeComponent();
       Data = data;
       conexion.getConexion();
-        }
+    }
 
     public void OnComplete(object Control, DPFP.FeatureSet FeatureSet, ref DPFP.Gui.EventHandlerStatus Status) {
       DPFP.Verification.Verification ver = new DPFP.Verification.Verification();
@@ -96,16 +96,16 @@ namespace UI_Support
         void DarDeBaja(string tabla, int ID)
         {
 
-            string consulta = '';
+            string consulta = "";
             MySqlCommand comando = null;
 
             // Recupera todo la informacion de la persona seleccionada
             consulta = $"SELECT * FROM " + tabla + " WHERE ID = " + ID.ToString();
 
-            string Nombre;
-            string Apellido;
+            string Nombre = "";
+            string Apellido = "";
 
-            using (comando = new MySqlCommand(consulta, conexion))
+            using (comando = new MySqlCommand(consulta, conexion.getConexion()))
             {
                 MySqlDataReader result = comando.ExecuteReader();
 
@@ -120,7 +120,7 @@ namespace UI_Support
             // Enviarlo a la tabla de bajas
             consulta = $"INSERT (Nombre, Apellido) INTO " + tabla + " VALUES (@Nombre, @Apellido)";
 
-            using (comando = new MySqlCommand(consulta, conexion))
+            using (comando = new MySqlCommand(consulta, conexion.getConexion()))
             {
                 comando.Parameters.AddWithValue("@Nombre", Nombre);
                 comando.Parameters.AddWithValue("@Apellido", Apellido);
@@ -130,8 +130,8 @@ namespace UI_Support
             // Elimina de la tabla seleccionada 
             consulta = $"DELETE FROM " + tabla + " WHERE ID = " + ID.ToString();
 
-            using (comando = new MySqlCommand(consulta, conexion)) {
-                comando.ExecuteReader()
+            using (comando = new MySqlCommand(consulta, conexion.getConexion())) {
+                comando.ExecuteReader();
             }
 
         }
